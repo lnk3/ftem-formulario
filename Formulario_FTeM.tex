@@ -29,21 +29,17 @@
 
 \[ X =\frac{v - v_{_{LC}}}{v_{_{VS}} - v_{_{LS}}}\]
 
-\[ R_{_{COND}}^{^{LASTRA P.}} =\frac{S}{KA}\]
 
 \[ R_{_{CONV}} =\frac{I}{hA}\]
 	
 \[ R = \Big [\frac {K}{W}\Big ], \quad  r =\Big [\frac{Km^{2}}{W} \Big ]\]
 
-\[ R_{_{COND}}^{^{CIL}} = \frac {\ln \Big ( \frac {r_{e}}{r_{i}} \Big )} {2 \pi KL} \]
+
 
 \[ \dot m = \rho \omega A \]
 
 \[ \dot m = \rho V \]
 
-\[ \dot q =\frac{\Delta T}{r_{_{TOT}}}  \quad \textrm{Flusso Termico} \]
-
-\[ \dot Q =\frac{\Delta T}{R_{_{TOT}}}  \quad \textrm{Potenza Termica} \]
 
 \[ T_{i} = T_{0} - \dot Q \sum _{0}^{i} R \]	
 
@@ -104,6 +100,33 @@
 	q_{in} = \Delta h
 	\]	
 
+\section{Conduzione}
+Flusso termico
+\[
+	\dot{q} = \frac{\dot{Q}}{A}
+	\]
+Legge Fourier che descrive flusso termico
+\[
+	\dot{q} = -k\frac{dT}{dx}
+	\]
+
+	Conducibilitá Termica
+	\[ k = \lambda = \frac{\dot{q}L}{\Delta T}\]
+Conservazione dell'energia
+\[
+	\frac{d\dot{q}}{dx}=-\rho c\frac{dT}{dt}
+	\]
+Equazione generale della Conduzione
+\[\frac{\partial}{\partial x}\bigg( k\frac{\partial T}{\partial x} \bigg) = \rho c \frac{dT}{dt}
+\]
+
+\[ R_{_{COND}}^{^{LASTRA P.}} =\frac{S}{KA}\]
+\[ R_{_{COND}}^{^{CIL}} = \frac {\ln \Big ( \frac {r_{e}}{r_{i}} \Big )} {2 \pi KL} \]
+
+
+Potenza Termica
+\[ \dot{Q} =\frac{\Delta T}{R_{_{TOT}}}  \quad \textrm{Potenza Termica} \]
+\[ \dot{q} =\frac{\Delta T}{r_{_{TOT}}}  \quad \textrm{Flusso Termico} \]
 
 \end{multicols}
 \end{document}
