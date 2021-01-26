@@ -162,18 +162,63 @@ Equazione generale della Conduzione \\
 \) \\
 \begin{tabular}{c|c}
 $ R_{_{cond}}^{^{\text{lastra p.}}} =\frac{S}{KA}$
-& $ R_{_{cond}}^{^{cilin}} = \frac {\ln \Big ( \frac {r_{e}}{r_{i}} \Big )} {2 \pi KL} $
+& $ R_{_{cond}}^{^{cilin}} = \frac {\ln ( \frac {r_{e}}{r_{i}} )} {2 \pi KL} $ \\
 \end{tabular} \\
 
-\[ \dot{Q} =\frac{\Delta T}{R_{_{TOT}}}  \quad \textrm{Potenza Termica} \]
-\[ \dot{q} =\frac{\Delta T}{r_{_{TOT}}}  \quad \textrm{Flusso Termico} \]
-
+\begin{tabular}{l r}
+$\dot{Q} =\frac{\Delta T}{R_{_{TOT}}} $& $\textrm{Potenza Termica}$ \\
+$\dot{q} =\frac{\Delta T}{r_{_{TOT}}}$  &$ \textrm{Flusso Termico} $ \\
+$ R = \Big[ \frac {K}{W}\Big ]$ & $ r =\Big [\frac{Km^2}{W} \Big] $ \\
+\end{tabular}
+\textbf{Generazione interna}: \\
+\(\dot{Q_{in}} + \dot{g}V = \dot{Q_{out}} + \frac{dU}{dt} \) \\
+Lastra piana con convezione: \\
+\(T = -\frac{\dot g}{2k}x^2 + \frac{\dot g}{2k}Lx + T_s\) \\
+\(\dot q = -k(-\frac{\dot g}{k}x+\frac{\dot g}{2k}L)\) 
 
 \section*{Convezione}
+Legge di Newton per la convezione:\\
+\(\dot{Q} = h A (T_s - T_{\infty})\) \\
+Il numero di Biot ci indica se possiamo usare l'analisi a parametri concentrati: \\
+\( B_{i} = \frac {hL_{c}}{k_{_{materiale}}} \ll 0.01 \quad \vline \quad 
+ L_{c} = \frac {V}{A_{_{\text{scambio}}}} \)
+\[T(t) = T_{\infty} + {(T_0-T_\infty)}^{e^{- \frac{t}{T}} }\]
+\[ \tau = \frac {Mc}{hA_{_{SCAMBIO}}} \quad   = \frac{\rho Vc}{hA} \]
+\[t = -  \frac {\rho cV}{hA} \ln \bigg ( \frac {T(t)-T_{\infty}}{T(0)-T_{\infty}}  \bigg )\]
+La viscositá cinematica: \(\nu = \frac {\mu}{\rho} \) \\
+Perdita di carico: \(\Delta P = f\big(\frac{L}{D}\big)\rho \frac{w^2}{2}\) \\
+\[ Re = \frac {w_{\infty} \rho L}{\mu}   = \frac{w_{\infty} L}{\nu} \]
+\begin{tabular}{l r}
+	Lastra p. & $Re_{cr} = 500000$ \\
+	Cil. esterno & $Re_{cr} = 100000$ \\
+	Cil. interno & $2300 < \text{instabile} < 4000$ \\
+	 & $ 4000 < \text{turbolento}$
+\end{tabular}
+
+\[ P_{R} = \frac {c_p\mu}{k} \]
+\begin{tiny}differenza con Biot é che il \(k\) usato é quello del fluido non quello del solido\end{tiny}
+\[ N_{u} = \frac{\dot{Q_{cnv}}}{\dot{Q_{cnd}}} = \frac {hL}{k} \]
+\[T_{film} = \frac{T_s + T_{\infty}}{2}\]
+
+\subsection*{Alette}
+Equazione aletta:
+\begin{align*}
+	-d\dot{Q}_{cond} &= \dot{Q}_{conv} \\
+	\frac{d}{dx} \big( \frac{dT}{dx} \big) &= \frac{h\cdot \text{P}_{erimetro}}{k_s\cdot Sez} \cdot (T-T_{\infty})
+\end{align*}
+Parametro alette: \(m=\sqrt{\frac{h\cdot \text{P}_{erimetro}}{k_s\cdot Sez}}\)
+\[L_{c} = L_{fin} + \frac {t}{2} \]
+\[\eta_{fin} = \frac{\tanh(m\cdot L)}{m\cdot L}\]
+\begin{align*}
+\dot{Q}_{tot} &= \dot{Q}_{base} + \dot{Q}_{fin} \\
+&= h(A_{base} + A_{fin} \cdot \eta_{fin} ) \cdot (T_s-T_{\infty})
+\end{align*}
+
 Coefficiente globale di scambio termico interno
 \[ \frac {1}{U_{i}} = \frac {1}{h_{i}} + \frac {D_{i} \ln \Big( \frac {D_{e}}{D_{i}} \Big) } {2k} + \frac {1}{h_{c}} \frac {D_{i}}{D_{e}}  \]
 \textbf{Differenza media logaritmica}
 \[ \Delta T_{ML} = \frac {\Delta T_{Sn}-\Delta T_{Dx}} { \ln \Big( \frac { \Delta T_{Sn}}{\Delta T_{Dx}} \Big) }   \]
+
 
 
 
@@ -191,7 +236,6 @@ Coefficiente globale di scambio termico interno
 
 \[ R_{_{CONV}} =\frac{I}{hA}\]
 	
-\[ R = \Big [\frac {K}{W}\Big ], \quad  r =\Big [\frac{Km^{2}}{W} \Big ]\]
 
 
 
@@ -209,14 +253,6 @@ Coefficiente globale di scambio termico interno
 \[ dh = cdt + vdP \]
 	
 \[ds= c \frac{dT}{T}\]
-
-\[T(t) = T_{\infty} + {(T_0-T_\infty)}^{e^{- \frac{t}{T}} }\]
-
-\[ \tau = \frac {Mc}{hA_{_{SCAMBIO}}} \quad   = \frac{\rho Vc}{hA} \]
-
-\[t = -  \frac {\rho cV}{hA} \ln \bigg ( \frac {T(t)-T_{\infty}}{T(0)-T_{\infty}}  \bigg )\]
-
-\[ L_{c} = \frac {V}{A_{_{SCAMBIO}}} \]
 
 \section{Costanti}
 
@@ -238,31 +274,13 @@ Coefficiente globale di scambio termico interno
 
 \section{New section to be retitled}
 
-\[ Re = \frac {w_{\infty} \rho L}{\mu} \quad   = \frac{w_{\infty} L}{\nu} \]
-
-\[ P_{R} = \frac {\mu_{c}}{k} \]
-
-
-%\[ N_{u} = \frac {h}{k} \]
-
-
-\[ B_{i} = \frac {hL_{c}}{k_{_{MATERIALE}}} \ll 0.01\]
-
 
 \[ Nu = cRe^{m} \Pr^{\frac {1}{3}} \]
 
-\[ Re_{CR} = 5^{10^{5}} \quad =50000 \]
 
 
 
-\[\nu = \frac {M}{\rho} \]
 
-\[L_{c} = L_{g} \frac {t}{2} \]
-
-\[ m = \sqrt{
-	\frac{hP}{k_s Sez}
-}
-\]
 
 
 
