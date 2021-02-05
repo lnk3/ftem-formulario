@@ -1,4 +1,4 @@
-\documentclass[portrait,a4paper]{article}
+\documentclass[landscape,a4paper]{article}
 \usepackage[a4paper, margin=10pt]{geometry}	
 \usepackage{multicol}
 \usepackage{amsmath}
@@ -15,7 +15,7 @@
 
 
 \begin{document}
-\begin{multicols}{3}
+\begin{multicols}{4}
 
 
 \section*{Bilanci}
@@ -157,7 +157,7 @@ Per una trasformazione ISOBARA si usano le stesse leggi dei gas ideali, ma sicco
 \[ X =\frac{v - v_{_{LS}}}{v_{_{VS}} - v_{_{LS}}}\]
 
 
-\section*{Conduzione}
+\subsection*{Conduzione}
 Flusso termico: \(\dot{q} = \frac{\dot{Q}}{A} \) \\
 Legge Fourier che descrive flusso termico:
 \[
@@ -188,7 +188,7 @@ Lastra piana con convezione: \\
 \(T = -\frac{\dot g}{2k}x^2 + \frac{\dot g}{2k}Lx + T_s\) \\
 \(\dot q = -k(-\frac{\dot g}{k}x+\frac{\dot g}{2k}L)\) 
 
-\section*{Convezione}
+\subsection*{Convezione}
 Legge di Newton per la convezione:\\
 \(\dot{Q} = h A (T_s - T_{\infty})\) \\
 Il numero di Biot ci indica se possiamo usare l'analisi a parametri concentrati: \\
@@ -236,16 +236,16 @@ Termica: \(L \approx 0.05\cdot Re\cdot D\cdot Pr\) \\
 
 \subsubsection*{Convezione interna}
 \textbf{Profilo Temperatura} \\
-Temperatura superficiale costante:\\ 
+Temperatura superficiale costante:
 \[\ln \frac{T_s -T_u}{T_s - T_i} = -\frac{h\cdot A}{\dot{m}\cdot C_p}\] \\
-Flusso termico costante: \\
+Flusso termico costante:
 \[T_s - T_f = \frac{\dot{q}}{h}\]
 
 \textbf{Differenza media logaritmica}
 \[ \Delta T_{ML} = \frac {\Delta T_{Sx}-\Delta T_{Dx}} { \ln \Big( \frac { \Delta T_{Sn}}{\Delta T_{Dx}} \Big) }   \]
 
-\section*{Scambiatori di calore}
-Dispositivo aperto con due fluidi che scambiano calore, ma non scambiano lavoro se la trasformazione é TIR (Se ci sono perdite di carico significa che é NON-TIR).
+\subsection*{Scambiatori di calore}
+%Dispositivo aperto con due fluidi che scambiano calore, ma non scambiano lavoro se la trasformazione é TIR (Se ci sono perdite di carico significa che é NON-TIR).
 
 \textbf{Interna}\\
 \(\dot{m}_f = (\rho_f\cdot w_f \cdot A_t)\cdot N_{tubi}\) \\
@@ -275,7 +275,7 @@ Calore scambiato: \(\dot{Q} = U \cdot A\cdot \Delta T_{ml}\)
 
 
 
-\section{Compressori}
+\subsection*{Compressori}
 Sistema aperto che richiede un lavoro in ingresso per comprimere un gas (aumentare la sua pressione). \\
 Se trasformazione isoentropica, quindi abbiamo rapporto di compressione
 \(Pv^\gamma = \text{cost}\) \\
@@ -289,18 +289,15 @@ $n$ uguali in serie: \(\beta_{tot} = \beta^n\)
 
 
 \section*{Turbine}
-Sistema aperto che produce lavoro da un gas/vapore sfruttando la sua energia cinetica/lavoro di pulsione. \\
-Rendimento isoentropico \\
-\[ \eta_{is}^T = \frac{l_{out}}{l_{out}^{is}} = \frac{h_i - h_u}{h_i - h_{u}^{is}} =  \frac{T_i - T_u}{T_i - T_{u}^{is}}\] \\
-Lavoro entrante \\
+%Sistema aperto che produce lavoro da un gas/vapore sfruttando la sua energia cinetica/lavoro di pulsione. \\
+Rendimento isoentropico
+\[ \eta_{is}^T = \frac{l_{out}}{l_{out}^{is}} = \frac{h_i - h_u}{h_i - h_{u}^{is}} =  \frac{T_i - T_u}{T_i - T_{u}^{is}}\]
+Lavoro entrante
 \[ \dot L_{out} = \dot m c_p \frac{(T_i - T_u^{is})}{\eta_{is}^T} \]
-
-
-\section*{Equazione di Bernoulli}
+\textbf{Equazione di Bernoulli}
 Linea dei carichi totali [m]:
 \[ z + \frac{P}{g\rho} + \frac{w^2}{2g} = \text{costante} = H\]
-
-\section*{Pompa}
+\textbf{Pompa}
 Lavoro necessario per aumentare pressione di un liquido.\\
 $\dot{L}_{in} = \dot{m} (h_u - h_i) + \dot{m} (\frac{w_u^2}{2}-\frac{w_i^2}{2})$
 \begin{align*}
